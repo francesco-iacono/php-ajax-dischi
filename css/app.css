@@ -1,3 +1,64 @@
-body {
-  background-color: red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #120C0C;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header .container img {
+  width: 50px;
+}
+
+main {
+  width: 100%;
+  background-color: #151515;
+}
+main .discs-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 980px;
+  margin: auto;
+  height: 100%;
+  padding: 20px 30px;
+  overflow-y: auto;
+}
+main .discs-container .box-cd {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: calc(100% / 6 - 20px);
+  height: 230px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: rgba(98, 107, 99, 0.2);
+  color: #ffff;
+  text-align: center;
+}
+main .discs-container .box-cd img {
+  width: 100%;
+  border-radius: 2px;
+}
+main .discs-container .box-cd h4 {
+  font-size: 16px;
+  margin: 4px 0;
+}
+main .discs-container .box-cd p {
+  font-size: 12px;
+  color: gray;
 }
