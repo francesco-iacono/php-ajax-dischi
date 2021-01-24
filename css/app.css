@@ -5,9 +5,38 @@
   font-family: "Roboto", sans-serif;
 }
 
+#app {
+  width: 100%;
+  height: 100vh;
+}
+
 .container {
-  width: 980px;
+  width: 860px;
   margin: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(98, 107, 99, 0.2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: rgba(98, 107, 99, 0.2);
 }
 
 header {
@@ -26,39 +55,52 @@ header .container img {
 
 main {
   width: 100%;
+}
+main .main-box {
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
   background-color: #151515;
 }
-main .discs-container {
+main .main-box .discs-container {
   display: flex;
   flex-wrap: wrap;
-  width: 980px;
+  width: 860px;
   margin: auto;
   height: 100%;
-  padding: 20px 30px;
-  overflow-y: auto;
+  padding: 20px 0px;
 }
-main .discs-container .box-cd {
+main .main-box .discs-container .box-cd {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: calc(100% / 6 - 20px);
-  height: 230px;
+  width: calc(100% / 3 - 40px);
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   border-radius: 2px;
   background-color: rgba(98, 107, 99, 0.2);
   color: #ffff;
   text-align: center;
 }
-main .discs-container .box-cd img {
+main .main-box .discs-container .box-cd .poster-box {
+  width: 100%;
+  height: 240px;
+}
+main .main-box .discs-container .box-cd .poster-box img {
   width: 100%;
   border-radius: 2px;
 }
-main .discs-container .box-cd h4 {
-  font-size: 16px;
-  margin: 4px 0;
+main .main-box .discs-container .box-cd .title-box {
+  padding: 8px 0;
 }
-main .discs-container .box-cd p {
+main .main-box .discs-container .box-cd .title-box h4 {
+  font-size: 18px;
+}
+main .main-box .discs-container .box-cd .info-cd {
+  padding: 8px 0;
+}
+main .main-box .discs-container .box-cd .info-cd p {
   font-size: 12px;
+  margin-bottom: 5px;
   color: gray;
 }

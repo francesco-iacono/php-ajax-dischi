@@ -15,20 +15,9 @@ include __DIR__ . '/db.php';
   <title>Dischi</title>
 </head>
 <body>
-  <?php include __DIR__ . '/partials/header.php'; ?>
-  <main>
-    <div class="discs-container">
-      <?php foreach ($discs as $key => $disc): ?>
-          <div class="box-cd">
-              <img src="<?php echo $disc["poster"]?>" alt="">
-              <h4><?php echo $disc["title"]?></h4>
-              <div class="info-cd">
-                <p><?php echo $disc["author"]?></p>
-                <p><?php echo $disc["year"]?></p>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        </div>
-  </main>
+  <div id="app">
+    <?php include __DIR__ . '/partials/header.php'; ?>
+    <?php include __DIR__ . '/partials/main.php'; ?>
+  </div>
 </body>
 </html>

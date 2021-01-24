@@ -1,36 +1,27 @@
 main {
   width: 100%;
-  background-color: $colorGray;
-  .discs-container {
-    display: flex;
-    flex-wrap: wrap;
-    @include container;
-    height: 100%;
-    padding: 20px 30px;
+  .main-box {
+    width: 100%;
+    height: calc(100vh - 80px);
     overflow-y: auto;
-    .box-cd {
+    background-color: $colorGray;
+    .discs-container {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      width: calc(100% / 6 - 20px);
-      height: 230px;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 2px;
-      background-color: rgba(98, 107, 99, 0.2);
-      color: #ffff;
-      text-align: center;
-      img {
-        width: 100%;
-        border-radius: 2px;
-      }
-      h4 {
-        font-size: 16px;
-        margin: 4px 0;
-      }
-      p {
-        font-size: 12px;
-        color: gray;
+      flex-wrap: wrap;
+      @include container;
+      height: 100%;
+      padding: 20px 0px;
+      .box-cd {
+        @include cdBox;
+        .poster-box {
+          @include posterBox;
+        }
+        .title-box {
+          @include titleBox;
+        }
+        .info-cd {
+          @include infoCd;
+        }
       }
     }
   }
