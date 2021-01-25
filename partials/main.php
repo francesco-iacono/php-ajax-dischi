@@ -1,10 +1,10 @@
 <main>
   <div class="main-box">
-    <div class="discs-container">
+    <div class="container">
       <?php foreach ($discs as $key => $disc): ?>
         <div class="box-cd">
           <div class="poster-box">
-            <img src="<?php echo $disc["poster"]?>" alt="">
+            <img src="<?php echo $disc["poster"]?>" alt="<?php echo $disc["title"]?>">
           </div>
           <div class="title-box">
             <h4><?php echo $disc["title"]?></h4>

@@ -5,7 +5,7 @@ main {
     height: calc(100vh - 80px);
     overflow-y: auto;
     background-color: $colorGray;
-    .discs-container {
+    .container {
       display: flex;
       flex-wrap: wrap;
       @include container;
